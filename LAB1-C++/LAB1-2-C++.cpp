@@ -5,7 +5,8 @@ using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "Rus");
-	struct peoples {
+	struct peoples 
+	{
 		char sName[30];//Фамилия
 		char Name[30];//Имя
 		char thName[30];//Отчество
