@@ -6,10 +6,10 @@ int main()
 { 
 	setlocale(LC_ALL, "Rus");
 	struct Shop {
-		char Seller[30];
-		char ProductName[50];
-		short Price;
-		short PDay, PMonth, PYear;
+		char Seller[30];//продавец
+		char ProductName[50];//Имя товара
+		short Price;//Цена
+		short PDay, PMonth, PYear;//Дата
 	};
 	
 	char s;
