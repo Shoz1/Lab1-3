@@ -26,5 +26,8 @@
     <ClCompile Include="LAB1-C++.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="LAB1-2-C++.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
