@@ -7,40 +7,40 @@ int main()
 	setlocale(LC_ALL, "Rus");
 	struct peoples 
 	{
-		char sName[30];//Фамилия
-		char Name[30];//Имя
-		char thName[30];//Отчество
-		char work[30];//Занимаемая должность
-		short Salary;//Зарплата
-		short WDay, WMonth, WYear;//Дата
+		char sName[30];//Р¤Р°РјРёР»РёСЏ
+		char Name[30];//РРјСЏ
+		char thName[30];//РћС‚С‡РµСЃС‚РІРѕ
+		char work[30];//Р—Р°РЅРёРјР°РµРјР°СЏ РґРѕР»Р¶РЅРѕСЃС‚СЊ
+		short Salary;//Р—Р°СЂРїР»Р°С‚Р°
+		short WDay, WMonth, WYear;//Р”Р°С‚Р°
 	};
 
 	short AvrgSalary = 10000;
 	char s;
 	int Day, Month, Year;
-	cout << "Введите сегодняшнюю дату Д/М/Г например: 12.06.2019\n";
+	cout << "Р’РІРµРґРёС‚Рµ СЃРµРіРѕРґРЅСЏС€РЅСЋСЋ РґР°С‚Сѓ Р”/Рњ/Р“ РЅР°РїСЂРёРјРµСЂ: 12.06.2019\n";
 	cin >> Day >> s >> Month >> s >> Year;
 	cout << "\n";
 
 	short n;
-	cout << "Введите коол людей:\n";
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕРѕР» Р»СЋРґРµР№:\n";
 	cin >> n;
 	cin.ignore();
 	peoples people[10];
 
 	for (int i = 0; i < n; i++) {
 
-		cout << "Введите Фамилию Рабочего "<< endl;
+		cout << "Р’РІРµРґРёС‚Рµ Р¤Р°РјРёР»РёСЋ Р Р°Р±РѕС‡РµРіРѕ "<< endl;
 		cin.getline(people[i].sName, 30);
-		cout << "Введите имя Рабочего\n";
+		cout << "Р’РІРµРґРёС‚Рµ РёРјСЏ Р Р°Р±РѕС‡РµРіРѕ\n";
 		cin.getline(people[i].Name, 30);
-		cout << "Введите отчество Рабочего\n";
+		cout << "Р’РІРµРґРёС‚Рµ РѕС‚С‡РµСЃС‚РІРѕ Р Р°Р±РѕС‡РµРіРѕ\n";
 		cin >> (people[i].thName);
-		cout << "Введите должность Рабочего\n";
+		cout << "Р’РІРµРґРёС‚Рµ РґРѕР»Р¶РЅРѕСЃС‚СЊ Р Р°Р±РѕС‡РµРіРѕ\n";
 		cin >> (people[i].work);
-		cout << "Введите зарплату Рабочего\n";
+		cout << "Р’РІРµРґРёС‚Рµ Р·Р°СЂРїР»Р°С‚Сѓ Р Р°Р±РѕС‡РµРіРѕ\n";
 		cin >> (people[i].Salary);
-		cout << "Введите год рождения Рабочего Д/М/Г например: 12.06.1996\n";
+		cout << "Р’РІРµРґРёС‚Рµ РіРѕРґ СЂРѕР¶РґРµРЅРёСЏ Р Р°Р±РѕС‡РµРіРѕ Р”/Рњ/Р“ РЅР°РїСЂРёРјРµСЂ: 12.06.1996\n";
 		cin >> (people[i].WDay) >> s >> (people[i].WMonth) >> s >> (people[i].WYear);
 		cin.ignore();
 
@@ -51,17 +51,17 @@ int main()
 		if (people[i].Salary > AvrgSalary && people[i].WYear - Year < 30 || people[i].Salary > AvrgSalary && people[i].WYear - (Year - 1) < 30 && people[i].WMonth >= Month && people[i].WDay >= Day) 
 		{
 			cout << endl;
-			cout << "Фамилия Рабочего\n";
+			cout << "Р¤Р°РјРёР»РёСЏ Р Р°Р±РѕС‡РµРіРѕ\n";
 			cout << people[i].sName << endl;
-			cout << "Имя Рабочего\n" ;
+			cout << "РРјСЏ Р Р°Р±РѕС‡РµРіРѕ\n" ;
 			cout << people[i].Name << endl;
-			cout << "Отчество Рабочего\n";
+			cout << "РћС‚С‡РµСЃС‚РІРѕ Р Р°Р±РѕС‡РµРіРѕ\n";
 			cout << (people[i].thName) << endl;
-			cout << "Должность Рабочего\n";
+			cout << "Р”РѕР»Р¶РЅРѕСЃС‚СЊ Р Р°Р±РѕС‡РµРіРѕ\n";
 			cout << (people[i].work) << endl;
-			cout << "Зарплата Рабочего\n";
+			cout << "Р—Р°СЂРїР»Р°С‚Р° Р Р°Р±РѕС‡РµРіРѕ\n";
 			cout << (people[i].Salary) << endl;
-			cout << "год рождения Рабочего Д/М/Г например: 12.06.1996\n";
+			cout << "РіРѕРґ СЂРѕР¶РґРµРЅРёСЏ Р Р°Р±РѕС‡РµРіРѕ Р”/Рњ/Р“ РЅР°РїСЂРёРјРµСЂ: 12.06.1996\n";
 			cout << (people[i].WDay) << s << (people[i].WMonth) << s << (people[i].WYear) << endl;
 		}
 
